@@ -1,0 +1,20 @@
+{% extends "student_register/base.html" %} {% block content %}
+<form action="" method="post" autocomplete="off">
+  {% csrf_token %} {{form}}
+  <div class="row">
+    <div class="col-md-8">
+      <button type="submit" class="btn btn-success btn-block btn-lg">
+        Submit
+      </button>
+    </div>
+    <div class="col-md-4">
+      <a
+        href="{% url 'student_select' %}"
+        class="btn btn-secondary btn-block btn-lg"
+      >
+        Back to select
+      </a>
+    </div>
+  </div>
+</form>
+{%endblock content %}
