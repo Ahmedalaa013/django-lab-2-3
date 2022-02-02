@@ -30,6 +30,6 @@ def student_form(request,id=0):
     return redirect('/student/select')     
 
 def student_delete(request,id):
-     employee = Student.objects.get(pk=id)
-     employee.delete()
+     student = Student.objects.get(pk=id)
+     student.delete()
      return redirect('/student/select')
